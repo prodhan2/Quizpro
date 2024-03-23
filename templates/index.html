@@ -2,29 +2,43 @@
 
 {% block title %}Index{% endblock %}
 
+
 {% block body %}
 <div class="container mt-5 mb-5">
-<div class="row">
-  <p>Hello{% if request.user.is_authenticated %} {{ request.user.username }}{% endif %},</p>
-</div>
-<div class="row">
-  <p>My name is Bittu and I am a passionate developer. Welcome to my quiz website!</p>
-</div>
-<div class="row">
-  <p>Here, students have the opportunity to contribute their own questions and challenge other students. I believe that learning is not limited to textbooks, and by creating this platform, I aim to foster a collaborative and engaging environment for students to expand their knowledge. With the ability to add questions and participate in quizzes, students can actively participate in the learning process and test their understanding of various subjects.</p>
-</div>
-<div class="row">
-  <p>Join me on this exciting journey of exploration and let's enhance our knowledge together.
-     Feel free to reach out to me on my GitHub profile at <a href="https://github.com/dev-bittu">dev-bittu</a> for any suggestions or feedback.
-  </p>
-  <p>
-    This is an Open Source Project.
-    Source Code is available <a href="https://github.com/dev-bittu/quizapp">here</a>.
-  </p>
-  <p>Happy quizzing!</p>
-</div>
-<div class="row">
-  <p>~<em>Bittu</em></p>
+  <div class="row">
+    <p class="typewriter-text">আসলামুয়ালাইকুম {% if request.user.is_authenticated %} {{ request.user.username }}{% endif %},</p>
+  </div>
+
+  <div class="row">
+    <p class="typewriter-text">আমি  সুজন প্রধান  এবং রাজশাহী বিশ্ববিদ্যালয়ে  কম্পিউটার বিজ্ঞান এবং  প্রকৌশল বিভাগে অধ্যায়নরত আছি । আমার কুইজ ওয়েবসাইটে  আপনাকে স্বাগতম!</p>
+  </div>
+
+  <div class="row">
+    <p class="typewriter-text">এখানে, ছাত্রদের তাদের নিজস্ব প্রশ্ন তৈরী করা  এবং অন্যান্য ছাত্রদের চ্যালেঞ্জ করার সুযোগ আছে। আমি বিশ্বাস করি যে শেখার বিষয়টা  পাঠ্যপুস্তকের মধ্যে সীমাবদ্ধ নয়, এবং এই প্ল্যাটফর্মটি তৈরি করার মাধ্যমে, আমি শিক্ষার্থীদের তাদের জ্ঞান প্রসারিত করার জন্য একটি সহযোগিতামূলক এবং আকষণীয় পরিবেশ  গড়ে তোলার চেষ্টা করেছি । প্রশ্ন যোগ করার এবং কুইজে অংশগ্রহণ করার ক্ষমতা সহ, শিক্ষার্থীরা সক্রিয়ভাবে শেখার প্রক্রিয়ায় অংশগ্রহণ করতে পারে এবং বিভিন্ন বিষয়ে তাদের বোঝার পরীক্ষা করতে পারবে  এখানে ।</p>
+  </div>
+
+  <div class="row">
+    <p class="typewriter-text">জ্ঞান অন্বেষণের এই উত্তেজনা পূর্ণ যাত্রায় আমার সাথে যোগ দিন এবং আসুন আমরা  একসাথে আমাদের জ্ঞান বৃদ্ধি করি। যেকোনো পরামর্শ এর জন্য  আমাকে <a href="https://m.me/prodhan2">মেসেঞ্জার </a>এ নির্দ্বিধায় আমার সাথে যোগাযোগ করুন।</p>
+  </div>
+  
+  <div class="row">
+    <p>হ্যাপি কুইজিং!</p>
+  </div>
+
+  <div class="row">
+    <p>~<em>~ সুজন  প্রধান 
+      --রাজশাহী বিশ্ববিদ্যালয় </em></p>
+  </div>
+
+  <div class="row">
+    <p class="typewriter-text">
+        <a href="{% url 'quiz' %}">কুইজ  এ অংশগ্রহণ করুন </a>  </br>
+        <a href="{% url 'result' %}"> রেজাল্ট দেখুন  </a> </br>
+        <a href="{% url 'add_question' %}">প্রশ্ন এড করুন</a>
+    </p>
+    <!-- Add Bootstrap horizontal line -->
+    <hr class="my-4">
+    <a href="{% url 'leaderboard' %}">Leaderboard</a>
 </div>
 </div>
 {% endblock %}
